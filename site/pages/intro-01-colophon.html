@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Untitled
+    </title>
+    <meta name="color-scheme" content="light dark">
+    <script>
+    const customColorMode = window.localStorage.getItem('color-mode');
+    if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/print.css" media="print">
+  </head>
+  <body class="article">
+    <nav class="top-nav">
+      <a href="../index.html">Plurivers</a>
+    </nav>
+
+    <main>
+      <div class='text'>
+        <p>
+          © Wildproject 2022
+        </p>
+
+        <p>
+          Suivi éditorial : Gayané Zavatto (avec Fabrice Flipo)
+        </p>
+
+        <p>
+          Correction : Laure Dupont
+        </p>
+
+        <p>
+          Cet ouvrage a été traduit par un collectif coordonné par Fabrice Flipo et les éditions Wildproject, composé de : Clément Amézieux, Judith&nbsp;Bastie, Maxime&nbsp;Bello, Ludovic&nbsp;Bonduel, Pierrick Chalaye, Jean Chamel, Marie&nbsp;Cuillerai, Damien Delorme, Fabrice Flipo, Anne Fremaux, Georgia Lyon Froman, Anne Gagnant, Yann&nbsp;Grabowski, Morgane Iserte, Baptiste&nbsp;Lanaspeze, Francie&nbsp;Mégevand, Erwan Molinié, Marin Schaffner, Léna Silberzahn, Cyprien&nbsp;Tasset, Thierry Uso, Raymond Zaharia.
+        </p>
+
+        <p>
+          Titre original : <i>Pluriverse: A Post-Development Dictionary</i>
+        </p>
+
+        <p>
+          Première édition en Inde en 2019 chez Tulika Books et AuthorsUpFront publishing services
+        </p>
+
+        <p>
+          © pour le recueil : Ashish Kothari, Ariel Salleh, Arturo Escobar, Federico Demaria et Alberto Acosta, 2019
+        </p>
+
+        <p>
+          © pour les essais pris séparément : leurs auteurs respectifs
+        </p>
+
+        <p>
+          Licence Creative Commons CC BY-NC-SA 4.0
+        </p>
+
+        <p>
+          ISBN 978-2-381140-346
+        </p>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="theme">
+        <input type="checkbox" id="toggle-darkmode"> <label for="toggle-darkmode"><span>Mode sombre / clair</span></label> 
+        <script>
+
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+        </script>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

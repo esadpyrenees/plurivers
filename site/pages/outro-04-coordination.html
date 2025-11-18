@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Coordination
+    </title>
+    <meta name="color-scheme" content="light dark">
+    <script>
+    const customColorMode = window.localStorage.getItem('color-mode');
+    if (customColorMode !== null) document.documentElement.setAttribute('data-force-color-mode', customColorMode);      
+    </script>
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/print.css" media="print">
+  </head>
+  <body class="article">
+    <nav class="top-nav">
+      <a href="../index.html">Plurivers</a>
+    </nav>
+
+    <main>
+      <header>
+        <h1>
+          Coordination
+        </h1>
+      </header>
+
+      <div class='text'>
+        <p>
+          Arturo Escobar est professeur émérite d’anthropologie à l’université de Caroline du Nord et associé à plusieurs universités colombiennes. Il travaille avec les mouvements sociaux afrocolombiens depuis plus de deux décennies. Il est notamment l’auteur de <em>Sentir-penser avec la Terre : l’écologie au-delà de l’Occident</em> (Seuil, 2018).
+        </p>
+
+        <p>
+          Ashish Kothari estun écologiste indien,cofondateur de l’ong Kalpavriksh. Il a notamment coordonné le plan national de stratégie et d’action pour la biodiversité en Inde. Il a co-écrit et codirigé plus de 30&nbsp;ouvrages, dont <em>Alternative Futures: India Unshackled</em> (2017). Il est membre du groupe de travail permanent sur les alternatives au développement créé par la Fondation Rosa-Luxemburg.
+        </p>
+
+        <p>
+          Ariel Salleh est une militante et professeure honoraire en économie politique à l’université de Sydney en Australie. Elle est notamment l’autrice de <em>Ecofeminism as Politics: Nature, Marx, and the Postmodern</em> (Zed Books, 1997&nbsp;; 2<sup>e</sup>&nbsp;édition, 2017 ; traduction française à paraître chez Wildproject). Elle est membre du groupe de travail permanent sur les alternatives au développement.
+        </p>
+
+        <p>
+          Federico Demaria est un chercheur pluridisciplinaire qui travaille sur l’écologie politique et l’économie écologique à l’Institut de science et technologie de l’environnement de l’université autonome de Barcelone, en Espagne. Il est également producteur d’olives biologiques.
+        </p>
+
+        <p>
+          Alberto Acosta, économiste, ancien ministre de l’Énergie et des Mines de l’Équateur, est professeur et auteur de nombreux livres et articles, compagnon d’armes des luttes populaires et membre du groupe de travail permanent sur les alternatives au développement.
+        </p>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="theme">
+        <input type="checkbox" id="toggle-darkmode"> <label for="toggle-darkmode"><span>Mode sombre / clair</span></label> 
+        <script>
+
+                if ((customColorMode == 'dark') || (customColorMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.querySelector('#toggle-darkmode').checked = true;
+                }
+        </script>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

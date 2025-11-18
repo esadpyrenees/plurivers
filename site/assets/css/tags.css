@@ -1,0 +1,40 @@
+
+/* liste “flex” */
+.hashtags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1ch;
+}
+/* pas de marqueur “—” devant les items */
+.hashtags ul li::before {
+  content: "";
+}
+
+.hashtags a {
+  border-radius: 1em;
+  padding: 0 .5em;
+  text-decoration: none;
+  background: var(--accentcolor);
+  color: var(--backgroundcolor);
+}
+.hashtags a.active,
+.hashtags a:hover {
+  background: var(--textcolor);
+  color: var(--backgroundcolor);
+}
+
+/* affichage / masquage des articles */
+.articles li {
+  display: none;
+}
+.articles li.visible {
+  display: block;
+}
+
+/* mention “Aucun mot clé sélectionné” cachée si au moins un article est visible */
+.articles:has(.visible) .empty {
+  display: none;
+}

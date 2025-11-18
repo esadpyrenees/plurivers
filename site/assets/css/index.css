@@ -1,0 +1,40 @@
+
+
+/* ------------------------------------------------------------ déclaration */
+.declaration {
+  border-bottom: 1px solid var(--bordercolor);
+  margin: 1.6rem auto;
+}
+.declaration > * {
+  max-width: var(--maxwidth);
+  margin: 1.6rem auto;
+}
+.declaration blockquote p { 
+  margin: 0 auto;
+  --font-wght: 900;
+}
+.declaration p + p {
+  text-indent: 2em;
+}
+.declaration footer {
+  text-wrap: balance;
+  margin-top: 1.6rem;
+}
+
+/* ------------------------------------------------------------ mise en page */
+
+
+main {
+  border-bottom: 1px solid var(--bordercolor);
+}
+main > * {
+  padding: 0 1rem;
+}
+h2,
+.intro,
+.content,
+.outro,
+.tags-link {
+  max-width: var(--maxwidth);
+  margin: 1.6em auto;
+}
