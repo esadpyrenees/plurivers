@@ -1,30 +1,78 @@
 
 
 /* ------------------------------------------------------------ déclaration */
+html, body {
+  height: 100%;
+}
 .declaration {
-  border-bottom: 1px solid var(--bordercolor);
-  margin: 1.6rem auto;
+  position: absolute;
+  background: var(--textcolor);
+  color: var(--backgroundcolor);
+  inset: 0;
 }
 .declaration > * {
-  max-width: var(--maxwidth);
-  margin: 1.6rem auto;
+  position: absolute;
 }
-.declaration blockquote p { 
-  margin: 0 auto;
+.declaration > p,
+.declaration header  { 
+  border: none;
+  margin: 0 0 0 50vw;
   --font-wght: 900;
-}
-.declaration p + p {
-  text-indent: 2em;
-}
-.declaration footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-wrap: balance;
-  margin-top: 1.6rem;
+}
+.declaration figure {
+  width: 50vw;
+  height: 100%;
+  padding: 2em;
+  margin: 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: end;
+}
+.declaration figure figcaption {
+  display: none;
+}
+.declaration img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: 100%;
 }
 
+.declaration figure, .declaration .introtext{ opacity: 0; transition: opacity 500ms;}
+.declaration [data-in].visible { opacity: 1; }
+.declaration [data-out].hidden { opacity: 0; }
+
+.skip {
+  position: absolute;
+  z-index: 2;
+  bottom: var(--margin, 1em);
+  right: var(--margin, 1em);
+}
+.skip.hidden{
+  display: none;
+}
 /* ------------------------------------------------------------ mise en page */
 
-
+body.intro {
+  overflow: hidden;
+}
+body.skipped .declaration * {
+  opacity: 0;
+}
+body.skipped .declaration header,
+body.skipped .declaration figure:last-of-type,
+body.skipped .declaration figure:last-of-type img,
+body.skipped .declaration header * {
+  opacity: 1;
+}
 main {
+  margin-top: 100vh;
   border-bottom: 1px solid var(--bordercolor);
 }
 main > * {

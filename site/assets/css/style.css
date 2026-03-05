@@ -22,13 +22,14 @@ body {
 *, *::before, *::after {
   /* dans le cas d’une fonte variable, on établit des variables (ici, graisse et chasse) pour tous les éléments: */
   font-variation-settings: "wght" var(--font-wght, 400), "wdth" var(--font-wdth, 112.5);
+  box-sizing: border-box;
 }
 
 
 /* ------------------------------------------------------------ thème clair & sombre */
 /* Thème clair */
-:root,
-:root[data-force-color-mode="light"] {
+html,
+html[data-force-color-mode="light"] {
   color-scheme: light dark;
   --textcolor: rgb(33, 33, 33);
   --bordercolor: rgb(99, 99, 99);
@@ -39,7 +40,7 @@ body {
 
 /* Thème sombre : obligation de dupliquer dans @media les règles ci-dessus */
 @media (prefers-color-scheme: dark) {
-  :root {
+  html {
     --textcolor: rgb(209, 209, 209);
     --bordercolor: rgb(99, 99, 99);
     --accentcolor: #1da840;
@@ -49,7 +50,7 @@ body {
 }
 
 /* Thème sombre */
-:root[data-force-color-mode="dark"] {
+html[data-force-color-mode="dark"] {
   --textcolor: rgb(209, 209, 209);
   --bordercolor: rgb(99, 99, 99);
   --accentcolor: #1da840;
@@ -211,4 +212,17 @@ tbody tr:last-child td, tbody tr:last-child th {
   gap: 1em;
   justify-content: space-between;
   border-bottom: 1px solid var(--bordercolor);
+}
+
+
+.monimage {
+  margin: 2em -1em;
+  width: 100%;
+  aspect-ratio: 16/9;
+  width: calc(100% + 2em);
+}
+.monimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
